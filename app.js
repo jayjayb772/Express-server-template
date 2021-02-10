@@ -3,7 +3,6 @@ const express = require('express');
 const controller = require('./src/main/controllers/controller')
 const app = express();
 const {debuglog} = require('./src/main/util/debugCommands');
-const ENV = process.env.ENV;
 const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
@@ -11,7 +10,7 @@ const options = {
     definition: {
         openapi: '3.0.0', // Specification (optional, defaults to swagger: '2.0')
         info: {
-            title: 'Messaging Service', // Title (required)
+            title: 'NodeJS Express Template', // Title (required)
             version: '1.0.0', // Version (required)
         },
     },
@@ -35,7 +34,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
  *       - application/json
  *     responses:
  *       200:
- *         description: login
+ *         description: Okay
  */
 app.get('/', (req, res) =>{
     debuglog("HOME")
