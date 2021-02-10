@@ -1,8 +1,8 @@
 {
   "name": "Express-Server-template",
   "version": "1.0.0",
-  "description": "LED MATRIX PROGRAMS",
-  "main": "app.js",
+  "description": "Template for Express Apps",
+  "main": "src/main/app.js",
   "scripts": {
     "start": "node ./bin/www",
     "test": "jest",
